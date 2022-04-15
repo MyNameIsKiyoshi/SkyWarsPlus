@@ -1,0 +1,15 @@
+name: SkyWarsPlus
+version: '1.0.1a'
+main: cf.speederscoders.skywarsplus.Main
+api-version: 1.16
+authors: [ YumaHisai ]
+description: Addon For SkyWars | Add More Functions For SkyWars
+softdepend:
+  - SkyWarsPlusAPI
+website: speederscoders.cf
+commands:
+  resethp:
+    description: "Reset Operator HP"
+    aliases: [ rhp ]
+  skyore:
+    description: "Open SkyWarsPlus Ore Gui"
