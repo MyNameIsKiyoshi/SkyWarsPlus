@@ -106,7 +106,7 @@ public class Main extends JavaPlugin {
                 lang_it_config.createSection("Message");
                 lang_it_config.set("Message.Prefix", " &9SkyWarsPlus ");
                 lang_it_config.set("Message.CommandBlockedInConsole", "&cComando in console bloccato.");
-                lang_it_config.set("Message.HealSpellUse", "&dHai usato un incantesimo di magia arcanica di cura..");
+                lang_it_config.set("Message.HealSpellUse", "&dHai usato un incantesimo di cura arcana..");
                 lang_it_config.set("Message.CantUseHealSpell", "&cNon puoi ancora usare l'incantesimo..");
                 lang_it_config.save(lang_it);
             } catch (IOException ex) {
