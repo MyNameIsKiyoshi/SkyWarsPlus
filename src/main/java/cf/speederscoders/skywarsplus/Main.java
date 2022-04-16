@@ -25,6 +25,7 @@ package cf.speederscoders.skywarsplus;
 import cf.speederscoders.skywarsplus.commands.ResetHP;
 import cf.speederscoders.skywarsplus.commands.SkyOre;
 import cf.speederscoders.skywarsplus.events.*;
+import cf.speederscoders.skywarsplus.events.spells.UseHealSpell;
 import cf.speederscoders.skywarsplusapi.SkyWarsPlusAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
@@ -64,9 +65,8 @@ public class Main extends JavaPlugin {
 
     public void initialize() throws IOException {
         saveDefaultConfig();
-        saveConfig();
-        getConfig().options().copyDefaults(true);
         getConfig().options().copyHeader(true);
+        getConfig().options().copyDefaults(true);
         instance = this;
 
 
@@ -106,7 +106,8 @@ public class Main extends JavaPlugin {
                 lang_it_config.createSection("Message");
                 lang_it_config.set("Message.Prefix", " &9SkyWarsPlus ");
                 lang_it_config.set("Message.CommandBlockedInConsole", "&cComando in console bloccato.");
-                lang_it_config.set("Message.BadLuckSpell", "&cChe sfiga non hai trovato lo spell..");
+                lang_it_config.set("Message.HealSpellUse", "&dHai usato un incantesimo di magia arcanica di cura..");
+                lang_it_config.set("Message.CantUseHealSpell", "&cNon puoi ancora usare l'incantesimo..");
                 lang_it_config.save(lang_it);
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -119,7 +120,8 @@ public class Main extends JavaPlugin {
                 lang_en_config.createSection("Message");
                 lang_en_config.set("Message.Prefix", " &9SkyWarsPlus ");
                 lang_en_config.set("Message.CommandBlockedInConsole", "&cCommand blocked in console.");
-                lang_en_config.set("Message.BadLuckSpell", "&cWhat bad luck you did not find the spell..");
+                lang_en_config.set("Message.HealSpellUse", "&dYou used an arcanic healing spell..");
+                lang_en_config.set("Message.CantUseHealSpell", "&cYou can't use the spell yet");
                 lang_en_config.save(lang_en);
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -149,7 +151,8 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new CoralPlaceEvent(), this);
         // Register LapisBlockBreak Listener
         getServer().getPluginManager().registerEvents(new BreakLapisOre(), this);
-
+        // Register Heal Spell Listener
+        getServer().getPluginManager().registerEvents(new UseHealSpell(), this);
     }
 
 

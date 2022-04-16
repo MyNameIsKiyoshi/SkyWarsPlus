@@ -48,35 +48,16 @@ public class BreakLapisOre extends Chance implements Listener{
             event.setDropItems(false); // Clear Default Drops
 
             if(getChance() <= 100 && getChance() >= 80){ // get Null ✅
-                if(messages.lang().equals("IT")){
-                    player.sendMessage(messages.BadLuckSpellIT());
-                } else if(messages.lang().equals("EN")) {
-                    player.sendMessage(messages.BadLuckSpellEN());
-                }
                 sounds.failSpell(player);
             } else if(getChance() <= 40 && getChance() >= 38){ // get get Null ✅
-                if(messages.lang().equals("IT")){
-                    player.sendMessage(messages.BadLuckSpellIT());
-                } else if(messages.lang().equals("EN")) {
-                    player.sendMessage(messages.BadLuckSpellEN());
-                }
-                sounds.failSpell(player);
+                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getHealSpell(player, 1));
+                sounds.getSpell(player);
             } else if(getChance() <= 20 && getChance() >= 18){ // get get Null ✅
-                if(messages.lang().equals("IT")){
-                    player.sendMessage(messages.BadLuckSpellIT());
-                } else if(messages.lang().equals("EN")) {
-                    player.sendMessage(messages.BadLuckSpellEN());
-                }
                 sounds.failSpell(player);
             } else if(getChance() <= 16 && getChance() >= 12){ // get get Null ✅
                 event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getHealSpell(player, 1));
                 sounds.getSpell(player);
             } else if(getChance() <= 12 && getChance() >= 8){ // get get Null ✅
-                if(messages.lang().equals("IT")){
-                    player.sendMessage(messages.BadLuckSpellIT());
-                } else if(messages.lang().equals("EN")) {
-                    player.sendMessage(messages.BadLuckSpellEN());
-                }
                 sounds.failSpell(player);
             }
 
@@ -89,7 +70,7 @@ public class BreakLapisOre extends Chance implements Listener{
             );
 
             event.getBlock().getLocation().getWorld().spawnParticle(
-                    Particle.CRIT_MAGIC,
+                    Particle.NOTE,
                     blockParticleLoc, 25
             );
         }

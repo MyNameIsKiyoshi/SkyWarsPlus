@@ -34,7 +34,8 @@ import org.bukkit.entity.Player;
 public class Sounds {
 
     public void getSpell(Player p){
-        p.playSound(p.getLocation(), Sound.ITEM_TRIDENT_THROW, 50, 2);
+        p.playSound(p.getLocation(), Sound.ENTITY_GENERIC_DRINK, 50, 2);
+        p.playSound(p.getLocation(), Sound.ENTITY_VILLAGER_YES, 50, 2);
     }
 
     public void failSpell(Player p){
@@ -78,6 +79,16 @@ public class Sounds {
     public void explodeBlock(Player p){
         p.playSound(p.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 50, 2);
         p.playSound(p.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE_FAR, 50, 2);
+    }
+
+    public void useHealSpell(Player p){
+        p.playSound(p.getLocation(), Sound.ITEM_TOTEM_USE, 50, 2);
+        p.playSound(p.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE_FAR, 50, 2);
+    }
+
+    public void cantUseHealSpell(Player p){
+        p.playSound(p.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 50, 2);
+        p.playSound(p.getLocation(), Sound.ENTITY_VILLAGER_NO, 50, 2);
     }
 
 }

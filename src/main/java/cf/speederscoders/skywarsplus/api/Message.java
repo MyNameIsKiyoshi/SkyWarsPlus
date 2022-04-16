@@ -24,6 +24,7 @@ package cf.speederscoders.skywarsplus.api;
 
 import cf.speederscoders.skywarsplus.Main;
 import cf.speederscoders.skywarsplus.backend.Chance;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -34,7 +35,7 @@ import java.io.File;
  * By YumaHisai at 9:22 PM
  */
 
-public class Message extends Chance {
+public class Message {
     public static File lang_it = new File(Main.getInstance().getDataFolder() + "/lang/it_IT.yml");
     public static File lang_en = new File(Main.getInstance().getDataFolder() + "/lang/en_US.yml");
     public static FileConfiguration lang_it_config;
@@ -43,35 +44,48 @@ public class Message extends Chance {
 
 
     public String lang(){
-        return lang;
+        return Main.getInstance().getConfig().getString("Lang");
     }
     public String CommandBlockedInConsoleIT(){
-        return lang.equals("IT") ? format.color(lang_it_config.getString("Message.CommandBlockedInConsole")) : "";
+        return lang.equals("IT") ? color(lang_it_config.getString("Message.CommandBlockedInConsole")) : "";
     }
 
     public String PrefixIT(){
-        return lang.equals("IT") ? format.color(lang_it_config.getString("Message.Prefix")) : "";
+        return lang.equals("IT") ? color(lang_it_config.getString("Message.Prefix")) : "";
     }
 
-    public String BadLuckSpellIT(){
-        return lang.equals("IT") ? format.color(lang_it_config.getString("Message.BadLuckSpell")) : "";
+    public String HealSpellUseIT(){
+        return lang.equals("IT") ? color(lang_it_config.getString("Message.HealSpellUse")) : "";
+    }
+
+    public String CantUseHealSpellIT(){
+        return lang.equals("IT") ? color(lang_it_config.getString("Message.CantUseHealSpell")) : "";
     }
 
     public String CommandBlockedInConsoleEN(){
-        return lang.equals("EN") ? format.color(lang_it_config.getString("Message.CommandBlockedInConsole")) : "";
+        return lang.equals("EN") ? color(lang_en_config.getString("Message.CommandBlockedInConsole")) : "";
     }
 
-    public String BadLuckSpellEN(){
-        return lang.equals("EN") ? format.color(lang_it_config.getString("Message.BadLuckSpell")) : "";
+
+    public String HealSpellUseEN(){
+        return lang.equals("EN") ? color(lang_en_config.getString("Message.HealSpellUse")) : "";
+    }
+
+    public String CantUseHealSpellEN(){
+        return lang.equals("EN") ? color(lang_en_config.getString("Message.CantUseHealSpell")) : "";
     }
 
     public String PrefixEN(){
-        return lang.equals("EN") ? format.color(lang_it_config.getString("Message.Prefix")) : "";
+        return lang.equals("EN") ? color(lang_en_config.getString("Message.Prefix")) : "";
     }
 
     static {
         lang_it_config = YamlConfiguration.loadConfiguration(lang_it);
         lang_en_config = YamlConfiguration.loadConfiguration(lang_en);
         lang = Main.getInstance().getConfig().getString("Lang");
+    }
+
+    public String color(String text){
+        return ChatColor.translateAlternateColorCodes('&', text);
     }
 }

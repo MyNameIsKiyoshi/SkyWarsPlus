@@ -1,0 +1,5 @@
+Message:
+  Prefix: ' &9SkyWarsPlus '
+  CommandBlockedInConsole: '&cCommand blocked in console.'
+  HealSpellUse: '&dYou used an arcanic healing spell..'
+  CantUseHealSpell: '&cYou can''t use the spell yet'
