@@ -23,6 +23,7 @@
 package cf.speederscoders.skywarsplus.backend;
 
 import cf.speederscoders.skywarsplus.api.Format;
+import cf.speederscoders.skywarsplus.api.Message;
 import cf.speederscoders.skywarsplus.api.Sounds;
 import cf.speederscoders.skywarsplus.api.Stack;
 
@@ -41,11 +42,15 @@ public abstract class Chance {
 
     public Stack stack = new Stack();
 
+    public Message messages = new Message();
+
     double rand = Math.random();
 
     public double getChance(){
         int rand_ = new Random().nextInt(100) - 1;
         return rand + rand_;
     }
+
+
 
 }

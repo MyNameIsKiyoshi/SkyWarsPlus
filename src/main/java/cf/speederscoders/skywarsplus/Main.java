@@ -28,8 +28,11 @@ import cf.speederscoders.skywarsplus.events.*;
 import cf.speederscoders.skywarsplusapi.SkyWarsPlusAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -87,6 +90,44 @@ public class Main extends JavaPlugin {
         }
     }
 
+    public void config(){
+        File lang = new File(this.getDataFolder(), "lang");
+        File lang_it = new File(this.getDataFolder() + "/lang/it_IT.yml");
+        File lang_en = new File(this.getDataFolder() + "/lang/en_US.yml");
+        if (!lang.exists()) {
+            lang.mkdir();
+        }
+
+        FileConfiguration lang_it_config = YamlConfiguration.loadConfiguration(lang_it);
+        FileConfiguration lang_en_config = YamlConfiguration.loadConfiguration(lang_en);
+        if (!lang_it.exists()) {
+            try {
+                lang_it.createNewFile();
+                lang_it_config.createSection("Message");
+                lang_it_config.set("Message.Prefix", " &9SkyWarsPlus ");
+                lang_it_config.set("Message.CommandBlockedInConsole", "&cComando in console bloccato.");
+                lang_it_config.set("Message.BadLuckSpell", "&cChe sfiga non hai trovato lo spell..");
+                lang_it_config.save(lang_it);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        if (!lang_en.exists()) {
+            try {
+                lang_en.createNewFile();
+                lang_en_config.createSection("Message");
+                lang_en_config.set("Message.Prefix", " &9SkyWarsPlus ");
+                lang_en_config.set("Message.CommandBlockedInConsole", "&cCommand blocked in console.");
+                lang_en_config.set("Message.BadLuckSpell", "&cWhat bad luck you did not find the spell..");
+                lang_en_config.save(lang_en);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
+
     /**
      * Register Events Here
      * ⬇         ⬇         ⬇
@@ -104,6 +145,11 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SwitchGuiInventory(), this);
         // Register MoreGHeartFix Listener
         getServer().getPluginManager().registerEvents(new MoreGHeartFix(), this);
+        // Register CoralBlockBreak Listener
+        getServer().getPluginManager().registerEvents(new CoralPlaceEvent(), this);
+        // Register LapisBlockBreak Listener
+        getServer().getPluginManager().registerEvents(new BreakLapisOre(), this);
+
     }
 
 
@@ -122,6 +168,7 @@ public class Main extends JavaPlugin {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        config();
         events();
         commands();
     }

@@ -49,7 +49,7 @@ public class PlaceBoomBox extends Chance implements Listener {
         int posz = event.getBlock().getLocation().getBlockZ();
         Location blockSpawnLoc = new Location(
                 event.getBlock().getWorld(),
-                posx, posy + 2, posz
+                posx, posy + 1, posz
         );
 
         if(player.getInventory().getItemInHand().equals(stack.getKBoomBox(player))){

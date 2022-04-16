@@ -87,6 +87,13 @@ public class SwitchGuiInventory extends Chance implements Listener {
                         player.getInventory().addItem(stack.getEmeraldOre(player, 1));
                     }
                     break;
+                case DEAD_BRAIN_CORAL_BLOCK:
+                    if(e.isShiftClick()){
+                        player.getInventory().addItem(stack.getCoralBlock(player, 64));
+                    } else {
+                        player.getInventory().addItem(stack.getCoralBlock(player, 1));
+                    }
+                    break;
             }
             sounds.getItemFromGuiOre(player);
             e.setCancelled(true);

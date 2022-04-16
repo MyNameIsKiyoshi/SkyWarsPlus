@@ -71,4 +71,13 @@ public class Sounds {
         p.playSound(p.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE_FAR, 50, 2);
     }
 
+    public void zzz(Player p){
+        p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 50, 2);
+    }
+
+    public void explodeBlock(Player p){
+        p.playSound(p.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 50, 2);
+        p.playSound(p.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE_FAR, 50, 2);
+    }
+
 }

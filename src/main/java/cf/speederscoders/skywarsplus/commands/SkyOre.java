@@ -42,7 +42,11 @@ public class SkyOre extends Chance implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(!(sender instanceof Player player)){
-            sender.sendMessage(format.color("&cYou can only run this command in game."));
+            if(messages.lang().equals("IT")){
+                sender.sendMessage(messages.messages.CommandBlockedInConsoleIT());
+            } else if(messages.lang().equals("EN")) {
+                sender.sendMessage(messages.messages.CommandBlockedInConsoleEN());
+            }
             return true;
         }
 
@@ -65,6 +69,8 @@ public class SkyOre extends Chance implements CommandExecutor {
             inv.setItem(20, stack.getDiamondOre(player, 1));
 
             inv.setItem(24, stack.getEmeraldOre(player, 1));
+
+            inv.setItem(31, stack.getCoralBlock(player, 1));
 
             sounds.openGuiOre(player);
             player.openInventory(inv);

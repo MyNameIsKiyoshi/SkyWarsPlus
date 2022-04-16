@@ -37,27 +37,47 @@ import org.bukkit.event.block.BlockBreakEvent;
  */
 
 @SuppressWarnings("ALL")
-public class BreakEmeraldOrDiamondOre extends Chance implements Listener{
+public class BreakLapisOre extends Chance implements Listener{
 
     @EventHandler
     public void onBreak(BlockBreakEvent event){
 
         Player player = event.getPlayer();
 
-        if(event.getBlock().getType().equals(Material.EMERALD_ORE)
-                || event.getBlock().getType().equals(Material.DIAMOND_ORE)){
+        if(event.getBlock().getType().equals(Material.LAPIS_ORE)){
             event.setDropItems(false); // Clear Default Drops
 
-            if(getChance() <= 100 && getChance() >= 80){ // get Diamond Chestplate ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(), stack.getDiamondChestplate(player));
-            } else if(getChance() <= 40 && getChance() >= 38){ // get Diamond Helmet ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(), stack.getDiamondHelmet(player));
-            } else if(getChance() <= 20 && getChance() >= 18){ // get Diamond Pickaxe ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getDiamondPickaxe(player));
-            } else if(getChance() <= 16 && getChance() >= 12){ // get KBoomBox ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getKBoomBox(player));
-            } else if(getChance() <= 12 && getChance() >= 8){ // get Diamond Sword ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getDiamondSword(player));
+            if(getChance() <= 100 && getChance() >= 80){ // get Null ✅
+                if(messages.lang().equals("IT")){
+                    player.sendMessage(messages.BadLuckSpellIT());
+                } else if(messages.lang().equals("EN")) {
+                    player.sendMessage(messages.BadLuckSpellEN());
+                }
+                sounds.failSpell(player);
+            } else if(getChance() <= 40 && getChance() >= 38){ // get get Null ✅
+                if(messages.lang().equals("IT")){
+                    player.sendMessage(messages.BadLuckSpellIT());
+                } else if(messages.lang().equals("EN")) {
+                    player.sendMessage(messages.BadLuckSpellEN());
+                }
+                sounds.failSpell(player);
+            } else if(getChance() <= 20 && getChance() >= 18){ // get get Null ✅
+                if(messages.lang().equals("IT")){
+                    player.sendMessage(messages.BadLuckSpellIT());
+                } else if(messages.lang().equals("EN")) {
+                    player.sendMessage(messages.BadLuckSpellEN());
+                }
+                sounds.failSpell(player);
+            } else if(getChance() <= 16 && getChance() >= 12){ // get get Null ✅
+                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getHealSpell(player, 1));
+                sounds.getSpell(player);
+            } else if(getChance() <= 12 && getChance() >= 8){ // get get Null ✅
+                if(messages.lang().equals("IT")){
+                    player.sendMessage(messages.BadLuckSpellIT());
+                } else if(messages.lang().equals("EN")) {
+                    player.sendMessage(messages.BadLuckSpellEN());
+                }
+                sounds.failSpell(player);
             }
 
             int posx = event.getBlock().getLocation().getBlockX();
@@ -69,13 +89,9 @@ public class BreakEmeraldOrDiamondOre extends Chance implements Listener{
             );
 
             event.getBlock().getLocation().getWorld().spawnParticle(
-                    Particle.TOTEM,
+                    Particle.CRIT_MAGIC,
                     blockParticleLoc, 25
             );
-
-            sounds.emeraldBreak(player);
-
-            //player.sendMessage(String.valueOf(getChance()));
         }
 
     }

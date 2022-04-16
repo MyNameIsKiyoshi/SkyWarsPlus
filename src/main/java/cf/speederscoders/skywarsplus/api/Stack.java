@@ -193,6 +193,22 @@ public class Stack {
         return item;
     }
 
+    public ItemStack getCoralBlock(Player player, Integer amount) {
+        ItemStack item = new ItemStack(Material.DEAD_BRAIN_CORAL_BLOCK, amount);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.color("&8Dead Coral"));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getHealSpell(Player player, Integer amount) {
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK, amount);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.color("&d♥ Heal Spell ♥"));
+        item.setItemMeta(meta);
+        return item;
+    }
+
     public ItemStack getSpacer(Player player) {
         ItemStack item = new ItemStack(Material.GRAY_STAINED_GLASS_PANE);
         ItemMeta meta = item.getItemMeta();
