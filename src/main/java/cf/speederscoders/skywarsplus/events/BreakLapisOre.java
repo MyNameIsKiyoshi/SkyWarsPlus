@@ -49,15 +49,15 @@ public class BreakLapisOre extends Chance implements Listener{
 
             if(getChance() <= 100 && getChance() >= 80){ // get Null ✅
                 sounds.failSpell(player);
-            } else if(getChance() <= 40 && getChance() >= 38){ // get get Null ✅
+            } else if(getChance() <= 40 && getChance() >= 38){ // get Spell ✅
                 event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getHealSpell(player, 1));
                 sounds.getSpell(player);
-            } else if(getChance() <= 20 && getChance() >= 18){ // get get Null ✅
+            } else if(getChance() <= 20 && getChance() >= 18){ // get Null ✅
                 sounds.failSpell(player);
-            } else if(getChance() <= 16 && getChance() >= 12){ // get get Null ✅
+            } else if(getChance() <= 16 && getChance() >= 12){ // get Spell ✅
                 event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getHealSpell(player, 1));
                 sounds.getSpell(player);
-            } else if(getChance() <= 12 && getChance() >= 8){ // get get Null ✅
+            } else if(getChance() <= 12 && getChance() >= 8){ // get Null ✅
                 sounds.failSpell(player);
             }
 
