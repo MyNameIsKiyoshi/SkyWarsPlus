@@ -85,7 +85,7 @@ public class Message {
         lang = Main.getInstance().getConfig().getString("Lang");
     }
 
-    public String color(String text){
+    private String color(String text){
         return ChatColor.translateAlternateColorCodes('&', text);
     }
 }
