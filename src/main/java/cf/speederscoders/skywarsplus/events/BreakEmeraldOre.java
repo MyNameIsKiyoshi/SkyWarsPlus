@@ -37,15 +37,14 @@ import org.bukkit.event.block.BlockBreakEvent;
  */
 
 @SuppressWarnings("ALL")
-public class BreakEmeraldOrDiamondOre extends Chance implements Listener{
+public class BreakEmeraldOre extends Chance implements Listener{
 
     @EventHandler
     public void onBreak(BlockBreakEvent event){
 
         Player player = event.getPlayer();
 
-        if(event.getBlock().getType().equals(Material.EMERALD_ORE)
-                || event.getBlock().getType().equals(Material.DIAMOND_ORE)){
+        if(event.getBlock().getType().equals(Material.EMERALD_ORE)){
             event.setDropItems(false); // Clear Default Drops
 
             if(getChance() <= 100 && getChance() >= 80){ // get Diamond Chestplate ✅

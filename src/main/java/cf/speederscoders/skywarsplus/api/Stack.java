@@ -134,6 +134,80 @@ public class Stack {
     }
 
     /**
+     * Start Diamond Ore Items
+     */
+
+    public ItemStack getIronChestplate(Player player) {
+        ItemStack item = new ItemStack(Material.IRON_CHESTPLATE);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.color("&7Iron Chestplate"));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getIronLeggings(Player player) {
+        ItemStack item = new ItemStack(Material.IRON_LEGGINGS);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.color("&7Iron Leggings"));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getKnockFish(Player player) {
+        ItemStack item = new ItemStack(Material.TROPICAL_FISH);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.hex(113, 86, 163, format.color("&lKnock Fish")));
+        meta.addEnchant(Enchantment.KNOCKBACK, 2, false);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getGApple(Player player) {
+        ItemStack item = new ItemStack(Material.GOLDEN_APPLE);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.color("&eGApple"));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getIronShover(Player player) {
+        ItemStack item = new ItemStack(Material.IRON_SHOVEL);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.color("&7Iron Shovel"));
+        meta.addEnchant(Enchantment.DIG_SPEED, 1, false);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    /**
+     * Start Gold Ore Items
+     */
+
+    public ItemStack getBow(Player player) {
+        ItemStack item = new ItemStack(Material.BOW);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.color("&9Bow"));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getSnowBall(Player player, Integer amount) {
+        ItemStack item = new ItemStack(Material.SNOWBALL, amount);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.color("&fSnow Ball"));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getFireCharge(Player player) {
+        ItemStack item = new ItemStack(Material.FIRE_CHARGE);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(format.color("&cFire Charge"));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    /**
      * Start Inventory Items
      */
 

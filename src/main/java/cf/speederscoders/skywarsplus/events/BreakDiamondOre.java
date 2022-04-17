@@ -37,26 +37,26 @@ import org.bukkit.event.block.BlockBreakEvent;
  */
 
 @SuppressWarnings("ALL")
-public class DiamondOre extends Chance implements Listener{
+public class BreakDiamondOre extends Chance implements Listener{
 
     @EventHandler
-    public void onBreak(BlockBreakEvent event){
+    public void onBreak(BlockBreakEvent event) {
 
         Player player = event.getPlayer();
 
-        if(event.getBlock().getType().equals(Material.DIAMOND_ORE)){
+        if (event.getBlock().getType().equals(Material.DIAMOND_ORE)) {
             event.setDropItems(false); // Clear Default Drops
 
-            if(getChance() <= 100 && getChance() >= 80){ // get Diamond Chestplate ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(), stack.getDiamondChestplate(player));
-            } else if(getChance() <= 40 && getChance() >= 38){ // get Diamond Helmet ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(), stack.getDiamondHelmet(player));
-            } else if(getChance() <= 20 && getChance() >= 18){ // get Diamond Pickaxe ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getDiamondPickaxe(player));
-            } else if(getChance() <= 16 && getChance() >= 12){ // get KBoomBox ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getKBoomBox(player));
-            } else if(getChance() <= 12 && getChance() >= 8){ // get Diamond Sword ✅
-                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(),stack.getDiamondSword(player));
+            if (getChance() <= 100 && getChance() >= 80) { // get Iron Chestplate ✅
+                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(), stack.getIronChestplate(player));
+            } else if (getChance() <= 40 && getChance() >= 38) { // get Iron Leggings ✅
+                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(), stack.getIronLeggings(player));
+            } else if (getChance() <= 20 && getChance() >= 18) { // get Knock Fish ✅
+                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(), stack.getKnockFish(player));
+            } else if (getChance() <= 16 && getChance() >= 12) { // get GApple ✅
+                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(), stack.getGApple(player));
+            } else if (getChance() <= 12 && getChance() >= 8) { // get Iron Shovel ✅
+                event.getBlock().getWorld().dropItem(event.getBlock().getLocation(), stack.getIronShover(player));
             }
 
             int posx = event.getBlock().getLocation().getBlockX();
@@ -68,15 +68,9 @@ public class DiamondOre extends Chance implements Listener{
             );
 
             event.getBlock().getLocation().getWorld().spawnParticle(
-                    Particle.TOTEM,
+                    Particle.VILLAGER_HAPPY,
                     blockParticleLoc, 25
             );
-
-            sounds.emeraldBreak(player);
-
-            //player.sendMessage(String.valueOf(getChance()));
         }
-
     }
-
 }

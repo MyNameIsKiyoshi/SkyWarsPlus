@@ -40,7 +40,7 @@ public class SwitchGuiInventory extends Chance implements Listener {
     @Deprecated
     public void PetsMove(InventoryClickEvent e) {
 
-        if (e.getView().getTitle().equalsIgnoreCase(format.color("&9&l        - GUI ORE -"))) {
+        if (e.getView().getTitle().equalsIgnoreCase(format.color("&9&l       - GUI  ORE -"))) {
             Player player = (Player) e.getWhoClicked();
             switch (e.getCurrentItem().getType()) {
                 case GRAY_STAINED_GLASS_PANE:

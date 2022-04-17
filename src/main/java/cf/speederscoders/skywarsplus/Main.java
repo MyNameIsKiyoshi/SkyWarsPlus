@@ -138,8 +138,10 @@ public class Main extends JavaPlugin {
         // Register Iron Ore Break Listener
         getServer().getPluginManager().registerEvents(new BreakIronOre(), this);
         // Register Emerald Ore Break Listener
-        getServer().getPluginManager().registerEvents(new BreakEmeraldOrDiamondOre(), this);
-        // Register Redstone Ore Break Listener\
+        getServer().getPluginManager().registerEvents(new BreakEmeraldOre(), this);
+        // Register Diamond Ore Break Listener
+        getServer().getPluginManager().registerEvents(new BreakDiamondOre(), this);
+        // Register Redstone Ore Break Listener
         getServer().getPluginManager().registerEvents(new BreakRedstoneOre(), this);
         // Register Normal KBoomBox Listener
         getServer().getPluginManager().registerEvents(new PlaceBoomBox(), this);
@@ -153,6 +155,8 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BreakLapisOre(), this);
         // Register Heal Spell Listener
         getServer().getPluginManager().registerEvents(new UseHealSpell(), this);
+        // Register GoldBlockBreak Listener
+        getServer().getPluginManager().registerEvents(new BreakGoldOre(), this);
     }
 
 

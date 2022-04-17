@@ -51,7 +51,7 @@ public class SkyOre extends Chance implements CommandExecutor {
         }
 
         if(player.hasPermission("skywarsplus.command.oregui")){
-            Inventory inv = Bukkit.createInventory(null, 36, format.color("&9&l        - GUI ORE -"));
+            Inventory inv = Bukkit.createInventory(null, 36, format.color("&9&l       - GUI  ORE -"));
             for (int i = 0; i < inv.getSize(); i++) {
                 if (inv.getItem(i) == null || inv.getItem(i).getType().equals(Material.AIR)) {
                     inv.setItem(i, stack.getSpacer(player));
