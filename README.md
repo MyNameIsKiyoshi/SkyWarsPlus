@@ -16,9 +16,6 @@
   <a href="">
     <img src="https://i.imgur.com/KE97RjX.png" alt="Logo" width="300" height="300">
   </a>
-
-<h3 align="center">SkyWarsPlus</h3>
-
   <p align="center">
     Addon for skyblock servers (implements the functionality of TheHive skywars) compatible with all skywars plugins
   </p>
@@ -41,11 +38,11 @@
      <pre><code data-language="css">/skyore • Open SkyWarsPlus GUI | skywarsplus.command.oregui
 </code></pre>
   </div>
+  
 <div align="center">
-
+  <p align="center"><img src="https://i.imgur.com/O2iKiQz.gif" alt="Download" width="300" height="300"></p>
+  <p align="center"><a href="#top"><img src="https://i.imgur.com/4hzBCOr.png" alt="Download" width="80" height="80"></a></p>
 </div>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
