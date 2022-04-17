@@ -40,7 +40,7 @@
   </div>
   
 <div align="center">
-  <p align="center"><img src="https://i.imgur.com/O2iKiQz.gif" alt="Download" width="300" height="300"></p>
+  <p align="center"><a href="https://github.com/YumaHisai/SkyWarsPlus/releases/download/base/SkyWarsPlus.jar"><img src="https://i.imgur.com/O2iKiQz.gif" alt="Download" width="300" height="300"></a></p>
   <p align="center"><a href="#top"><img src="https://i.imgur.com/4hzBCOr.png" alt="Download" width="80" height="80"></a></p>
 </div>
 
