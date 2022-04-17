@@ -66,4 +66,4 @@
 [discussion-shield]: https://img.shields.io/github/discussions/YumaHisai/SkyWarsPlus?style=for-the-badge
 [discussion-url]: https://img.shields.io/github/discussions/YumaHisai/SkyWarsPlus?style=for-the-badge
 [downloads-shield]: https://img.shields.io/github/downloads/YumaHisai/SkyWarsPlus/total?color=orange&style=for-the-badge
-[downloads-url]: https://img.shields.io/github/downloads/YumaHisai/SkyWarsPlus/total?color=orange&style=for-the-badge
+[downloads-url]: https://github.com/YumaHisai/SkyWarsPlus/releases/download/base/SkyWarsPlus.jar
