@@ -38,7 +38,7 @@
 
 <div class="codeheader" id="codeheader_css"><b>Commands</b></div>
   <div id="codebox">
-     <pre><code data-language="css">/skyore • Open SkyWarsPlus GUI
+     <pre><code data-language="css">/skyore • Open SkyWarsPlus GUI | skywarsplus.command.oregui
 </code></pre>
   </div>
 <div align="center">
