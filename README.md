@@ -32,7 +32,7 @@
     </tr>
     <tr>
         <td align="right"><b>Main Build</b></td>
-        <td colspan="2"><a href="https://img.shields.io/github/workflow/status/YumaHisai/SkyWarsPlus/SkyWarsPlus/master?label=BUILD%201.0.1a&style=for-the-badge"><img src="https://img.shields.io/github/workflow/status/YumaHisai/SkyWarsPlus/SkyWarsPlus/master?label=BUILD%201.0.1a&style=for-the-badge" alt="Build Status" /></a></td>
+        <td colspan="2"><a href="https://img.shields.io/github/workflow/status/YumaHisai/SkyWarsPlus/CI/master?label=BUILD%201.0.1a&style=for-the-badge"><img src="https://img.shields.io/github/workflow/status/YumaHisai/SkyWarsPlus/CI/master?label=BUILD%201.0.1a&style=for-the-badge" alt="Build Status" /></a></td>
     </tr>
 </table>
 
@@ -62,7 +62,7 @@
 [issues-shield]: https://img.shields.io/github/issues/YumaHisai/SkyWarsPlus?color=yellow&style=for-the-badge
 [issues-url]: https://github.com/YumaHisai/SkyWarsPlus/issues
 [license-shield]: https://img.shields.io/github/license/YumaHisai/SkyWarsPlus?style=for-the-badge
-[license-url]: https://github.com/YumaHisai/SkyWarsPlus/blob/master/LICENSE.md
+[license-url]: https://img.shields.io/github/license/YumaHisai/SkyWarsPlus?style=for-the-badge
 [discussion-shield]: https://img.shields.io/github/discussions/YumaHisai/SkyWarsPlus?style=for-the-badge
 [discussion-url]: https://img.shields.io/github/discussions/YumaHisai/SkyWarsPlus?style=for-the-badge
 [downloads-shield]: https://img.shields.io/github/downloads/YumaHisai/SkyWarsPlus/total?color=orange&style=for-the-badge
