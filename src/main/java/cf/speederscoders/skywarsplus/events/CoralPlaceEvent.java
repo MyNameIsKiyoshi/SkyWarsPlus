@@ -54,9 +54,9 @@ public class CoralPlaceEvent extends Chance implements Listener {
 
         if(material.equals(Material.DEAD_BRAIN_CORAL_BLOCK)){
 
-            PacketPlayOutBlockBreakAnimation packet1 = new PacketPlayOutBlockBreakAnimation(id, new BlockPosition(block.getX(), block.getY(), block.getZ()), 2);
+            PacketPlayOutBlockBreakAnimation packet1 = new PacketPlayOutBlockBreakAnimation(id, new BlockPosition(block.getX(), block.getY(), block.getZ()), 3);
             PacketPlayOutBlockBreakAnimation packet2 = new PacketPlayOutBlockBreakAnimation(id, new BlockPosition(block.getX(), block.getY(), block.getZ()), 6);
-            PacketPlayOutBlockBreakAnimation packet3 = new PacketPlayOutBlockBreakAnimation(id, new BlockPosition(block.getX(), block.getY(), block.getZ()), 8);
+            PacketPlayOutBlockBreakAnimation packet3 = new PacketPlayOutBlockBreakAnimation(id, new BlockPosition(block.getX(), block.getY(), block.getZ()), 9);
             PacketPlayOutBlockBreakAnimation packet0 = new PacketPlayOutBlockBreakAnimation(id, new BlockPosition(block.getX(), block.getY(), block.getZ()), -1);
             Bukkit.getScheduler().runTaskLater(Main.getInstance(), () -> ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet1), 20L);
             Bukkit.getScheduler().runTaskLater(Main.getInstance(), () -> ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet2), 40L);

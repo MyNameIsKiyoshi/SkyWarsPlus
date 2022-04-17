@@ -41,6 +41,10 @@ public class Stack {
 
     Format format = new Format();
 
+    /**
+     * Start Iron Ore Items
+     */
+
     public ItemStack getChainChestplate(Player player) {
         ItemStack item = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
         ItemMeta meta = item.getItemMeta();

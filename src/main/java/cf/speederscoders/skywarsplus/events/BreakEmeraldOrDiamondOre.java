@@ -32,7 +32,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 
 /**
- * BreakIronOre Created 4/7/2022
+ * EmeraldOre Created 4/7/2022
  * By YumaHisai at 10:53 PM
  */
 

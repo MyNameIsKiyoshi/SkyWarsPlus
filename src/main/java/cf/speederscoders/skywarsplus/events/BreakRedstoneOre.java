@@ -22,10 +22,8 @@
 
 package cf.speederscoders.skywarsplus.events;
 
-import cf.speederscoders.skywarsplus.Main;
 import cf.speederscoders.skywarsplus.backend.Chance;
 import net.minecraft.server.v1_16_R3.EntityPlayer;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
@@ -41,7 +39,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 public class BreakRedstoneOre extends Chance implements Listener {
 
     @EventHandler
-    public void onBreak(BlockBreakEvent event) throws InterruptedException {
+    public void onBreak(BlockBreakEvent event) {
 
         Player player = event.getPlayer();
         EntityPlayer cp = ((CraftPlayer)player).getHandle();
