@@ -159,7 +159,10 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BreakGoldOre(), this);
     }
 
-
+    /**
+     * Register Commmands Here
+     * ⬇         ⬇         ⬇
+     */
     public void commands(){
         getCommand("resethp").setExecutor(new ResetHP());
         getCommand("skyore").setExecutor(new SkyOre());
