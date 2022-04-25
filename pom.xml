@@ -105,6 +105,5 @@
             <scope>system</scope>
             <systemPath>${basedir}/src/lib/SkyWarsPlusAPI.jar</systemPath>
         </dependency>
-
     </dependencies>
 </project>

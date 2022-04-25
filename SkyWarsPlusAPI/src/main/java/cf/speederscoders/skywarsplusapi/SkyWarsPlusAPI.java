@@ -22,6 +22,7 @@
 
 package cf.speederscoders.skywarsplusapi;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -50,6 +51,7 @@ public class SkyWarsPlusAPI extends JavaPlugin {
         try {
             if(huc.getResponseCode() == 200){
                 Bukkit.getLogger().info("[YUMA-API] Successfully Enabled");
+                new Metrics(this, 15043);
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -22,7 +22,6 @@
 
 package cf.speederscoders.skywarsplus;
 
-import cf.speederscoders.skywarsplus.commands.ResetHP;
 import cf.speederscoders.skywarsplus.commands.SkyOre;
 import cf.speederscoders.skywarsplus.events.*;
 import cf.speederscoders.skywarsplus.events.spells.UseHealSpell;
@@ -164,7 +163,6 @@ public class Main extends JavaPlugin {
      * ⬇         ⬇         ⬇
      */
     public void commands(){
-        getCommand("resethp").setExecutor(new ResetHP());
         getCommand("skyore").setExecutor(new SkyOre());
     }
 

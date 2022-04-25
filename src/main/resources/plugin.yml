@@ -8,8 +8,5 @@ softdepend:
   - SkyWarsPlusAPI
 website: speederscoders.cf
 commands:
-  resethp:
-    description: "Reset Operator HP"
-    aliases: [ rhp ]
   skyore:
     description: "Open SkyWarsPlus Ore Gui"
