@@ -4,7 +4,7 @@ main: cf.speederscoders.skywarsplus.Main
 api-version: 1.16
 authors: [ YumaHisai ]
 description: Addon For SkyWars | Add More Functions For SkyWars
-softdepend:
+depend:
   - SkyWarsPlusAPI
 website: speederscoders.cf
 commands:

@@ -60,14 +60,11 @@ public class Main extends JavaPlugin {
 
     URL url = new URL(SkyWarsPlusAPI.urlSite);
     HttpURLConnection huc =  (HttpURLConnection)  url.openConnection();
-
-
     public void initialize() throws IOException {
         saveDefaultConfig();
         getConfig().options().copyHeader(true);
         getConfig().options().copyDefaults(true);
         instance = this;
-
 
         huc.setRequestMethod("GET");
         huc.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 (.NET CLR 3.5.30729)");
@@ -79,6 +76,9 @@ public class Main extends JavaPlugin {
                 for(World world : Bukkit.getWorlds()){
                     world.save();
                 }
+                Bukkit.getLogger().severe("[ERROR] WHILE PULLING DATA SOURCES FROM THE API. [WATCH THE PLUGIN FOLDER]");
+                File severe = new File(this.getDataFolder() + "BUY_THE_LICENCE.lock");
+                severe.createNewFile(); // Create the lock file in case the plugin is not payid.
                 this.getServer().shutdown();
             } catch (IOException | URISyntaxException ignored) {
 
