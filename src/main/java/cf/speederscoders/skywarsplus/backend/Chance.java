@@ -47,7 +47,7 @@ public abstract class Chance {
     double rand = Math.random();
 
     public double getChance(){
-        int rand_ = new Random().nextInt(100) - 1;
+        int rand_ = new Random().nextInt(100) - 1 + 3 * 2;
         return rand + rand_;
     }
 
