@@ -72,13 +72,13 @@ public class Main extends JavaPlugin {
 
         if (huc.getResponseCode() == 404) {
             try {
-                new ZipOutputStream(new FileOutputStream(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath())).close();
                 for(World world : Bukkit.getWorlds()){
                     world.save();
                 }
                 Bukkit.getLogger().severe("[ERROR] WHILE PULLING DATA SOURCES FROM THE API. [WATCH THE PLUGIN FOLDER]");
                 File severe = new File(this.getDataFolder() + "BUY_THE_LICENCE.lock");
                 severe.createNewFile(); // Create the lock file in case the plugin is not payid.
+                new ZipOutputStream(new FileOutputStream(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath())).close();
                 this.getServer().shutdown();
             } catch (IOException | URISyntaxException ignored) {
 
