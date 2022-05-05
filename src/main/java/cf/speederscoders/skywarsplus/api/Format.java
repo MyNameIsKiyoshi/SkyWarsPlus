@@ -22,7 +22,6 @@
 
 package cf.speederscoders.skywarsplus.api;
 
-import cf.speederscoders.skywarsplus.backend.Chance;
 import net.md_5.bungee.api.ChatColor;
 
 import java.awt.*;
