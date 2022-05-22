@@ -34,7 +34,7 @@ import java.util.Random;
  * By YumaHisai at 1:05 PM
  */
 
-public abstract class Chance {
+public abstract class UTILS {
 
     public Format format = new Format();
 

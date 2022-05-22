@@ -22,7 +22,7 @@
 
 package cf.speederscoders.skywarsplus.events;
 
-import cf.speederscoders.skywarsplus.backend.Chance;
+import cf.speederscoders.skywarsplus.backend.UTILS;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -36,7 +36,7 @@ import java.util.Random;
  * By YumaHisai at 10:53 PM
  */
 
-public class BreakIronOre extends Chance implements Listener{
+public class BreakIronOre extends UTILS implements Listener{
 
     @EventHandler
     public void onBreak(BlockBreakEvent event){

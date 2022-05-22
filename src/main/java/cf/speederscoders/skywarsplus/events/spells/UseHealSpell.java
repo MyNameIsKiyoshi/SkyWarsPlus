@@ -22,7 +22,7 @@
 
 package cf.speederscoders.skywarsplus.events.spells;
 
-import cf.speederscoders.skywarsplus.backend.Chance;
+import cf.speederscoders.skywarsplus.backend.UTILS;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
@@ -36,7 +36,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
  * By YumaHisai at 10:14 PM
  */
 
-public class UseHealSpell extends Chance implements Listener {
+public class UseHealSpell extends UTILS implements Listener {
 
     @EventHandler
     public void onUse(PlayerInteractEvent event){

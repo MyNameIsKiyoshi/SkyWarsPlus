@@ -22,7 +22,7 @@
 
 package cf.speederscoders.skywarsplus.events;
 
-import cf.speederscoders.skywarsplus.backend.Chance;
+import cf.speederscoders.skywarsplus.backend.UTILS;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -33,7 +33,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
  * By YumaHisai at 1:40 PM
  */
 
-public class SwitchGuiInventory extends Chance implements Listener {
+public class SwitchGuiInventory extends UTILS implements Listener {
 
 
     @EventHandler

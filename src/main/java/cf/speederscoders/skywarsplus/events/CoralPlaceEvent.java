@@ -23,7 +23,7 @@
 package cf.speederscoders.skywarsplus.events;
 
 import cf.speederscoders.skywarsplus.Main;
-import cf.speederscoders.skywarsplus.backend.Chance;
+import cf.speederscoders.skywarsplus.backend.UTILS;
 import net.minecraft.server.v1_16_R3.BlockPosition;
 import net.minecraft.server.v1_16_R3.PacketPlayOutBlockBreakAnimation;
 import org.bukkit.Bukkit;
@@ -40,7 +40,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
  * By YumaHisai at 5:57 PM
  */
 
-public class CoralPlaceEvent extends Chance implements Listener {
+public class CoralPlaceEvent extends UTILS implements Listener {
 
 
 

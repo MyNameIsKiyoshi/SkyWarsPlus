@@ -22,7 +22,7 @@
 
 package cf.speederscoders.skywarsplus.events;
 
-import cf.speederscoders.skywarsplus.backend.Chance;
+import cf.speederscoders.skywarsplus.backend.UTILS;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -37,7 +37,7 @@ import org.bukkit.event.block.BlockBreakEvent;
  */
 
 @SuppressWarnings("ALL")
-public class BreakDiamondOre extends Chance implements Listener{
+public class BreakDiamondOre extends UTILS implements Listener{
 
     @EventHandler
     public void onBreak(BlockBreakEvent event) {

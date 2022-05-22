@@ -22,7 +22,7 @@
 
 package cf.speederscoders.skywarsplus.commands;
 
-import cf.speederscoders.skywarsplus.backend.Chance;
+import cf.speederscoders.skywarsplus.backend.UTILS;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -38,7 +38,7 @@ import org.jetbrains.annotations.NotNull;
  */
 
 @SuppressWarnings("ConstantConditions")
-public class SkyOre extends Chance implements CommandExecutor {
+public class SkyOre extends UTILS implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(!(sender instanceof Player player)){

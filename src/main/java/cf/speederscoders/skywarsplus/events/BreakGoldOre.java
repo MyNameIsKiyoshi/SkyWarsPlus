@@ -23,7 +23,7 @@
 package cf.speederscoders.skywarsplus.events;
 
 import cf.speederscoders.skywarsplus.Main;
-import cf.speederscoders.skywarsplus.backend.Chance;
+import cf.speederscoders.skywarsplus.backend.UTILS;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -42,7 +42,7 @@ import java.util.List;
  */
 
 @SuppressWarnings("ALL")
-public class BreakGoldOre extends Chance implements Listener{
+public class BreakGoldOre extends UTILS implements Listener{
 
     @EventHandler
     public void onBreak(BlockBreakEvent event) {

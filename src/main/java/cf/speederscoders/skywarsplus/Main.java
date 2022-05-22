@@ -62,7 +62,7 @@ public class Main extends JavaPlugin {
     HttpURLConnection huc =  (HttpURLConnection)  url.openConnection();
     public void initialize() throws IOException {
         saveDefaultConfig();
-        getConfig().options().copyHeader(true);
+        getConfig().options().copyHeader(true); // getConfig().options().parseComments(true);
         getConfig().options().copyDefaults(true);
         instance = this;
 
@@ -156,6 +156,8 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new UseHealSpell(), this);
         // Register GoldBlockBreak Listener
         getServer().getPluginManager().registerEvents(new BreakGoldOre(), this);
+        // Register Fire-Snowball Launch
+        getServer().getPluginManager().registerEvents(new SnowBallThrowEvent(), this);
     }
 
     /**
@@ -184,7 +186,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onDisable(){
         try {
-            Bukkit.getLogger().info("The Responsive Code Is: [" + huc.getResponseCode() + "] ERROR");
+            Bukkit.getLogger().info("The Responsive Code Is: [" + huc.getResponseCode() + "] STOPPED");
         } catch (IOException e) {
             e.printStackTrace();
         }

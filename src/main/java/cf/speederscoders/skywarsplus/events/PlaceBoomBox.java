@@ -22,7 +22,7 @@
 
 package cf.speederscoders.skywarsplus.events;
 
-import cf.speederscoders.skywarsplus.backend.Chance;
+import cf.speederscoders.skywarsplus.backend.UTILS;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
@@ -37,7 +37,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
  */
 
 @SuppressWarnings("ALL")
-public class PlaceBoomBox extends Chance implements Listener {
+public class PlaceBoomBox extends UTILS implements Listener {
 
     @EventHandler
     public void onPlace(BlockPlaceEvent event){

@@ -23,43 +23,34 @@
 package cf.speederscoders.skywarsplus.events;
 
 import cf.speederscoders.skywarsplus.backend.UTILS;
-import net.minecraft.server.v1_16_R3.EntityPlayer;
-import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Snowball;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 
-/**
- * BreakRedstoneOre Created 4/8/2022
- * By YumaHisai at 1:56 PM
- */
+public class SnowBallThrowEvent extends UTILS implements Listener {
 
-public class BreakRedstoneOre extends UTILS implements Listener {
 
     @EventHandler
-    public void onBreak(BlockBreakEvent event) {
-
+    public void onClick(PlayerInteractEvent event){
         Player player = event.getPlayer();
-        EntityPlayer cp = ((CraftPlayer)player).getHandle();
-
-        if(event.getBlock().getType().equals(Material.REDSTONE_ORE)){
-            event.setDropItems(false); // Clear Default Drops
-            event.setExpToDrop(0); // Remove XP Drop
-
-            if(cp.getAbsorptionHearts() == 11){
-                cp.setAbsorptionHearts(cp.getAbsorptionHearts() - 1);
+        if(event.getAction().equals(Action.RIGHT_CLICK_AIR)){
+            if(player.getItemInHand().equals(stack.getSnowBall(player, player.getItemInHand().getAmount()))){
+                Snowball snowball = player.launchProjectile(Snowball.class);
+                snowball.setFireTicks(60);
             }
+        }
+    }
 
-            if(cp.getAbsorptionHearts() < 10){
-
-                cp.setAbsorptionHearts(cp.getAbsorptionHearts() + 2);
-
-                sounds.getGHeart(player); // Play Custom Sound
-            } else {
-                sounds.fullGHeart(player);
-
+    @EventHandler
+    public void onHit(EntityDamageEvent event){
+        if(event.getEntity() instanceof Player || event.getEntity() instanceof ArmorStand){
+            if(event.getCause().equals(EntityDamageEvent.DamageCause.PROJECTILE)){
+                event.getEntity().setFireTicks(60);
             }
         }
     }
