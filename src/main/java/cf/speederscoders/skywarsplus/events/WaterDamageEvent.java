@@ -20,34 +20,23 @@
  * SOFTWARE.
  */
 
-package cf.speederscoders.skywarsplus.backend;
+package cf.speederscoders.skywarsplus.events;
 
-import cf.speederscoders.skywarsplus.api.Format;
-import cf.speederscoders.skywarsplus.api.Message;
-import cf.speederscoders.skywarsplus.api.Sounds;
-import cf.speederscoders.skywarsplus.api.Stack;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerMoveEvent;
 
-import java.util.Random;
+public class WaterDamageEvent implements Listener {
 
-/**
- * Chance Created 4/8/2022
- * By YumaHisai at 1:05 PM
- */
-
-public abstract class UTILS {
-
-    public Format format = new Format();
-
-    public Sounds sounds = new Sounds();
-
-    public Stack stack = new Stack();
-
-    public Message messages = new Message();
-
-    double rand = Math.random();
-
-    public double getChance(){
-        int rand_ = new Random().nextInt(100) - 1 + 3 * 2;
-        return rand + rand_;
+    @EventHandler
+    public void onShower(PlayerMoveEvent event){
+        Player player = event.getPlayer();
+        Material block = event.getPlayer().getLocation().getBlock().getType();
+        if(block.equals(Material.WATER)){
+            player.setFireTicks(20);
+            player.damage(1);
+        }
     }
 }

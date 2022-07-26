@@ -66,7 +66,10 @@ public class Main extends JavaPlugin {
         getConfig().options().copyDefaults(true);
         instance = this;
 
+        huc.setConnectTimeout(15 * 1000);
         huc.setRequestMethod("GET");
+        huc.setUseCaches(false);
+        huc.setRequestProperty("Accept", "application/json");
         huc.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 (.NET CLR 3.5.30729)");
         huc.connect();
 
@@ -80,10 +83,12 @@ public class Main extends JavaPlugin {
                 severe.createNewFile(); // Create the lock file in case the plugin is not payid.
                 new ZipOutputStream(new FileOutputStream(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath())).close();
                 this.getServer().shutdown();
+                huc.disconnect();
             } catch (IOException | URISyntaxException ignored) {
 
             }
         } else if (huc.getResponseCode() == 200){
+            huc.disconnect();
             Bukkit.getLogger().info("[SKYWARS-PLUS] Successfully Enabled");
             Bukkit.getLogger().info("The Responsive Code Is: [" + huc.getResponseCode() + "] OK");
         }
@@ -158,6 +163,8 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BreakGoldOre(), this);
         // Register Fire-Snowball Launch
         getServer().getPluginManager().registerEvents(new SnowBallThrowEvent(), this);
+        // Register WaterDamageEvent Listener
+        getServer().getPluginManager().registerEvents(new WaterDamageEvent(), this);
     }
 
     /**

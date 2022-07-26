@@ -54,6 +54,8 @@ public class CoralPlaceEvent extends UTILS implements Listener {
 
         if(material.equals(Material.DEAD_BRAIN_CORAL_BLOCK)){
 
+        	// Il Server non c'entra il coral e' inteso come BLOCCO!!!!!!!
+
             PacketPlayOutBlockBreakAnimation packet1 = new PacketPlayOutBlockBreakAnimation(id, new BlockPosition(block.getX(), block.getY(), block.getZ()), 3);
             PacketPlayOutBlockBreakAnimation packet2 = new PacketPlayOutBlockBreakAnimation(id, new BlockPosition(block.getX(), block.getY(), block.getZ()), 6);
             PacketPlayOutBlockBreakAnimation packet3 = new PacketPlayOutBlockBreakAnimation(id, new BlockPosition(block.getX(), block.getY(), block.getZ()), 9);
@@ -67,5 +69,4 @@ public class CoralPlaceEvent extends UTILS implements Listener {
             }, 60L);
         }
     }
-
 }
