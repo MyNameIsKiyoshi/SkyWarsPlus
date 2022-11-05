@@ -35,11 +35,6 @@
      <pre><code data-language="css">/skyore • Open SkyWarsPlus GUI | skywarsplus.command.oregui
 </code></pre>
   </div>
-  
-<div align="center">
-  <p align="center"><a href="https://github.com/MyNameIsKiyoshi/SkyWarsPlus/releases/download/base/SkyWarsPlus.jar"><img src="https://i.imgur.com/O2iKiQz.gif" alt="Download" width="300" height="300"></a></p>
-</div>
-  <p align="right"><a href="#top"><img src="https://i.imgur.com/4hzBCOr.png" alt="TOP" width="50" height="50"></a></p>
 
 
 
