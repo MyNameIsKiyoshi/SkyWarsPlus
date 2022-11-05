@@ -13,9 +13,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="">
-    <img src="https://i.imgur.com/KE97RjX.png" alt="Logo" width="300" height="300">
-  </a>
   <p align="center">
     Addon for skyblock servers (implements the functionality of TheHive skywars) compatible with all skywars plugins
   </p>
