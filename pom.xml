@@ -7,24 +7,24 @@
   ~ Vestibulum commodo. Ut rhoncus gravida arcu.
   -->
 
+<!--suppress VulnerableLibrariesLocal -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cf.speederscoders</groupId>
+    <groupId>fur.kiysohi</groupId>
     <artifactId>SkyWarsPlus</artifactId>
-    <version>1.0.1a</version>
+    <version>20.37a</version>
     <packaging>jar</packaging>
 
     <name>SkyWarsPlus</name>
 
-    <description>Addon For SkyWars | Add More Functions For SkyWars</description>
+    <description>Addon For SkyWars | Add More Functions For Any SkyWars Plugin</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <url>speederscoders.cf</url>
 
     <build>
         <plugins>
@@ -82,13 +82,13 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <version>1.19.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
-            <version>1.16.4-R0.1-SNAPSHOT</version>
+            <version>1.19.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -96,14 +96,6 @@
             <artifactId>annotations</artifactId>
             <version>23.0.0</version>
             <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>cf.speederscoders.skywarsplusapi</groupId>
-            <artifactId>SkyWarsPlusAPI</artifactId>
-            <version>1.0.3b</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/lib/SkyWarsPlusAPI.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

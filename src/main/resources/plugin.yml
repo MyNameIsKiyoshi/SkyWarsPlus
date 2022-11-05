@@ -1,12 +1,9 @@
 name: SkyWarsPlus
-version: '1.0.1a'
-main: cf.speederscoders.skywarsplus.Main
+version: '20.37a'
+main: fur.kiyoshi.skywarsplus.Main
 api-version: 1.16
-authors: [ YumaHisai ]
+authors: [ MyNameIsKiyoshi ]
 description: Addon For SkyWars | Add More Functions For SkyWars
-depend:
-  - SkyWarsPlusAPI
-website: speederscoders.cf
 commands:
   skyore:
     description: "Open SkyWarsPlus Ore Gui"

@@ -1,7 +1,0 @@
-name: SkyWarsPlusAPI
-version: '${project.version}'
-main: cf.speederscoders.skywarsplusapi.SkyWarsPlusAPI
-api-version: 1.16
-authors: [ YumaHisai ]
-description: Essential Api For SkyWarsPlus
-website: https://speederscoders.cf
