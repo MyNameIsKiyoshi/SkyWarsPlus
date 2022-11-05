@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <p align="center">
-    Addon for skyblock servers (implements the functionality of TheHive skywars) compatible with all skywars plugins
+    Addon for skywars server plugins (implements the functionality of TheHive skywars) compatible with any skywars plugins
   </p>
 </div>
 
